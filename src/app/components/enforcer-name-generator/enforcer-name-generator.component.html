@@ -1,0 +1,24 @@
+
+<h1>Enforcer Name Generator</h1>
+
+<div>
+  <label for="numberOfNames">Number of names: </label>
+  <input
+  id="numberOfNames"
+  placeholder="1"
+  type="number"
+  [(ngModel)]="numberOfNames"
+  >
+</div>
+
+<button (click)="generateEnforcerNames(numberOfNames)">Generate Names</button>
+
+<div *ngIf="enforcerNames.length > 0">
+  <ul>
+    <li *ngFor="let name of enforcerNames">
+      {{name}}
+    </li>
+  </ul>
+</div>
+
+
