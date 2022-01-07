@@ -31,8 +31,7 @@ export class EnforcerNameGeneratorComponent implements OnInit {
   }
 
   randomNumber(min: number = 0, max: number = 1): number {
-    let random = Math.floor((Math.random() * max + 1) + min)
-    console.log(random)
+    let random = Math.floor((Math.random() * max) + min)
     return random
   }
 }
