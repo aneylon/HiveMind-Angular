@@ -1,8 +1,6 @@
 # HiveMind
 A Wargaming management resource.
 
-## Development server
-
 ## Development
 Run `ng serve -o` to run the dev server locally.
 
