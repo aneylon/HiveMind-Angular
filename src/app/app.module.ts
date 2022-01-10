@@ -7,6 +7,7 @@ import { EnforcerNameGeneratorComponent } from './components/enforcer-name-gener
 import { ListComponent } from './components/list/list/list.component';
 import { ListItemComponent } from './components/list/list-item/list-item.component';
 import { ListsComponent } from './components/list/lists/lists.component';
+import { ColorComponent } from './components/color/color.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ListsComponent } from './components/list/lists/lists.component';
     EnforcerNameGeneratorComponent,
     ListComponent,
     ListItemComponent,
-    ListsComponent
+    ListsComponent,
+    ColorComponent
   ],
   imports: [
     BrowserModule,
