@@ -1,1 +1,23 @@
-<p>color works!</p>
+
+<h1>Generate Color Schemes</h1>
+
+<div>
+  <label for=""></label>
+  <input
+    type="number"
+    [(ngModel)]="numberOfSwatches"
+    placeholder="3"
+  >
+</div>
+<button (click)="createColorSwatches(numberOfSwatches)">Create new swatches</button>
+
+<div *ngIf="swatches.length > 0">
+  <ul>
+    <li
+      class="swatch"
+      [style.background-color]="swatch.hex"
+      *ngFor="let swatch of swatches">
+      {{ swatch }}
+    </li>
+  </ul>
+</div>
