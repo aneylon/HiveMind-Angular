@@ -8,6 +8,7 @@ import { ListComponent } from './components/list/list/list.component';
 import { ListItemComponent } from './components/list/list-item/list-item.component';
 import { ListsComponent } from './components/list/lists/lists.component';
 import { ColorComponent } from './components/color/color.component';
+import { ColorSwatchComponent } from './components/color/color-swatch/color-swatch.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ColorComponent } from './components/color/color.component';
     ListComponent,
     ListItemComponent,
     ListsComponent,
-    ColorComponent
+    ColorComponent,
+    ColorSwatchComponent
   ],
   imports: [
     BrowserModule,

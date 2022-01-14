@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Swatch } from './models/swatch';
 
 @Component({
   selector: 'color-generator',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class ColorComponent implements OnInit {
 
   numberOfSwatches = 3
-  swatches: any[] = []
+  swatches: Swatch[] = []
 
   constructor() { }
 
@@ -19,7 +20,7 @@ export class ColorComponent implements OnInit {
   createColorSwatches(numberToGenerate: number) {
     this.swatches = []
     for(let i = 0; i < numberToGenerate; i++) {
-      let newSwatch = this.generateRandomColor()
+      let newSwatch = this.generateRandomColor() as Swatch
       this.swatches.push(newSwatch)
     }
     console.log(this.swatches)
@@ -31,17 +32,18 @@ export class ColorComponent implements OnInit {
     let green = this.randomColorNumber(255)
     let rbg = this.makeRGBString(red, blue, green)
     let hex = this.makeHexString(red, green, blue)
-    return {rbg: rbg, hex: hex}
+    return {rbgValue: rbg, hexValue: hex}
   }
 
-  makeHexString(red:number, green:number, blue:number) {
-    return Array.prototype.reduce.call(arguments, (acc, cur) => {
+  makeHexString(red:number, green:number, blue:number): string {
+    let hexString = Array.prototype.reduce.call(arguments, (acc, cur) => {
       let tmp = cur.toString(16)
-
+      
       if(tmp.length == 1) tmp = '0' + tmp
-
+      
       return acc + tmp
     }, '#')
+    return String(hexString).toUpperCase()
   }
 
   makeRGBString(red: number, green:number , blue: number){

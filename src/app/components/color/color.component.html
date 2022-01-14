@@ -12,12 +12,7 @@
 <button (click)="createColorSwatches(numberOfSwatches)">Create new swatches</button>
 
 <div *ngIf="swatches.length > 0">
-  <ul>
-    <li
-      class="swatch"
-      [style.background-color]="swatch.hex"
-      *ngFor="let swatch of swatches">
-      {{ swatch }}
-    </li>
-  </ul>
+  <app-color-swatch
+  *ngFor="let swatch of swatches"
+  [swatch]="swatch"></app-color-swatch>
 </div>
