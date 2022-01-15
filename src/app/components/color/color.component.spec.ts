@@ -31,7 +31,7 @@ describe('ColorComponent', () => {
   });
 
   it('should create a number of color swatches', () => {
-    const swatches = debugElement.queryAll(By.css('.swatch'))
+    const swatches = debugElement.queryAll(By.css('color-swatch'))
 
     expect(swatches).withContext('Could not find any swatches.').toBeTruthy()
     expect(swatches.length).toBeGreaterThan(0)

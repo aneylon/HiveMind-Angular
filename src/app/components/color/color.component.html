@@ -12,7 +12,7 @@
 <button (click)="createColorSwatches(numberOfSwatches)">Create new swatches</button>
 
 <div *ngIf="swatches.length > 0">
-  <app-color-swatch
+  <color-swatch
   *ngFor="let swatch of swatches"
-  [swatch]="swatch"></app-color-swatch>
+  [swatch]="swatch"></color-swatch>
 </div>

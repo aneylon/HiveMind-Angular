@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Swatch } from '../models/swatch';
 
 @Component({
-  selector: 'app-color-swatch',
+  selector: 'color-swatch',
   templateUrl: './color-swatch.component.html',
   styleUrls: ['./color-swatch.component.css']
 })
