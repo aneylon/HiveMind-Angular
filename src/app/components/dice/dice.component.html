@@ -1,0 +1,48 @@
+
+<h1>Dice Roller</h1>
+
+<div>
+  <label for="newDice">Add dice : </label>
+  <input
+    type="number"
+    id="newDice"
+    placeholder="0"
+    [(ngModel)]="newDice"
+    > {{ newDice }}
+  <input
+    type="number"
+    id="newModifier"
+    placeholder="0"
+    [(ngModel)]="newModifier"
+    >
+  <button
+    (click)="addDice(newDice, newModifier)"
+    [disabled]="disableAddDiceButton()"
+    >Add a Die!</button>
+</div>
+
+<div *ngIf="dice.length">
+  <div *ngFor="let die of dice">
+    1D{{ die.maxValue }}
+    <span *ngIf="die.modifier !== 0">
+      + {{ die.modifier }}
+    </span>
+  </div>
+</div>
+
+<button
+  (click)="rollDice(dice)"
+  [disabled]="disableRollDiceButton()"
+  >Roll Dice</button>
+<button (click)="clearDice()">Clear Dice</button>
+
+<div *ngIf="results.roll.length">
+  <h2>Results</h2>
+  <h3>Total : {{ results.total }}</h3>
+  <h3>Rolls : </h3>
+  <ul>
+    <li *ngFor="let roll of results.roll">
+    {{ roll }}
+    </li>
+  </ul>
+</div>
