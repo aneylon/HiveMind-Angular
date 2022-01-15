@@ -10,6 +10,7 @@ import { ListsComponent } from './components/list/lists/lists.component';
 import { ColorComponent } from './components/color/color.component';
 import { ColorSwatchComponent } from './components/color/color-swatch/color-swatch.component';
 import { DiceComponent } from './components/dice/dice.component';
+import { ForumComponent } from './components/forum/forum.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { DiceComponent } from './components/dice/dice.component';
     ListsComponent,
     ColorComponent,
     ColorSwatchComponent,
-    DiceComponent
+    DiceComponent,
+    ForumComponent
   ],
   imports: [
     BrowserModule,
