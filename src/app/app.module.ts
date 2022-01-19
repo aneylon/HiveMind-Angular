@@ -11,6 +11,7 @@ import { ColorComponent } from './components/color/color.component';
 import { ColorSwatchComponent } from './components/color/color-swatch/color-swatch.component';
 import { DiceComponent } from './components/dice/dice.component';
 import { ForumComponent } from './components/forum/forum.component';
+import { SettlementComponent } from './components/necromunda/settlement/settlement/settlement.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ForumComponent } from './components/forum/forum.component';
     ColorComponent,
     ColorSwatchComponent,
     DiceComponent,
-    ForumComponent
+    ForumComponent,
+    SettlementComponent
   ],
   imports: [
     BrowserModule,
