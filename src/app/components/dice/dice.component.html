@@ -2,19 +2,24 @@
 <h1>Dice Roller</h1>
 
 <div>
-  <label for="newDice">Add dice : </label>
-  <input
+  <label for="newDice">
+    Add dice :
+    <input
     type="number"
     id="newDice"
     placeholder="0"
     [(ngModel)]="newDice"
     > {{ newDice }}
-  <input
-    type="number"
-    id="newModifier"
-    placeholder="0"
-    [(ngModel)]="newModifier"
-    >
+  </label>
+  <label for="newModifier">
+    Modifier :
+    <input
+      type="number"
+      id="newModifier"
+      placeholder="0"
+      [(ngModel)]="newModifier"
+      >
+  </label>
   <button
     (click)="addDice(newDice, newModifier)"
     [disabled]="disableAddDiceButton()"
